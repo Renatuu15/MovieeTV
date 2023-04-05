@@ -1,19 +1,44 @@
 footer {
     padding: 2em;
+    width: 100%;
+    
 }
- .col-footer h4 {
-    font-size: 16px;
- }
 
+.container {
+    width: 100vw;
+}
  .col-footer li {
     list-style: none;
  }
+ .col-footer a {
+    text-decoration: none;
+ }
 .col-footer{
+   
     font-size: 14px;
-    margin: 0 5em;
+    margin: 1em 0em;
+}
+
+.col-footer a:hover {
+    color: #00FFFF;
+}
+.col-footer li {
+    margin: 1em;
 }
 
 .row-footer {
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     
+}
+
+.logo-footer {
+    text-align: center;
+    
+}
+
+.logo-footer img {
+   width: 40px;
+   height: 40px;
 }
