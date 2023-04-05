@@ -69,6 +69,7 @@ button#next[disabled] {
     width: 100%;
     height: 350px;
     left: 118px;
+    margin: 2em;
     
 
     background: #FFFFFF;
