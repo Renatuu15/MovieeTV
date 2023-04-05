@@ -1,0 +1,19 @@
+footer {
+    padding: 2em;
+}
+ .col-footer h4 {
+    font-size: 16px;
+ }
+
+ .col-footer li {
+    list-style: none;
+ }
+.col-footer{
+    font-size: 14px;
+    margin: 0 5em;
+}
+
+.row-footer {
+    display: flex;
+    
+}
