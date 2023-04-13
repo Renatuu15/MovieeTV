@@ -1,11 +1,15 @@
 footer {
+    
     padding: 2em;
-    width: 100%;
+    width: 100vw;
+    background-color: #23252b;
     
 }
 
-.container {
-    width: 100vw;
+.footer-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
 }
  .col-footer li {
     list-style: none;
@@ -15,7 +19,7 @@ footer {
  }
 .col-footer{
    
-    font-size: 14px;
+    font-size: 12px;
     margin: 1em 0em;
 }
 
@@ -29,16 +33,27 @@ footer {
 .row-footer {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:space-around;
     
 }
 
+
 .logo-footer {
+    
     text-align: center;
     
 }
+.logo-footer h3{
+    border: 2px solid #F20746;
+    margin: 0.5em 0;
+}
 
 .logo-footer img {
-   width: 40px;
-   height: 40px;
+   width: 30px;
+   height: 30px;
+}
+
+.logo-footer h3 {
+    font-size: 16px;
+    color: #00FFFF;
 }

@@ -9,7 +9,7 @@
   color: #fff;
 }
 body {
-  background:  #16171b;
+  background-color:  #16171b;
 }
 .nav {
   position: fixed;
@@ -34,13 +34,19 @@ nav a {
 }
 
 nav a:hover { 
-  color: #00FFFF;
+  color: #05F2F2;
   transition:step-end;
+}
+nav a:active  {
+  color: #F20746;
+  
 }
 .nav .logo {
   font-size: 22px;
   font-weight: 500;
-  color: #00FFFF;
+  color: #05F2F2;
+  border: 2px solid #F20746;
+  padding: 5px;
 }
 .nav .nav-links {
   column-gap: 20px;

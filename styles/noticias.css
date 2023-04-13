@@ -15,7 +15,7 @@ main {
 
 
 section {
-    margin: 4em;
+    margin: 4em auto;
 
 }
 
@@ -28,15 +28,17 @@ form {
 
 }
 .container {
+
     max-width: 500px;
     margin: 0 auto;
   }
 
   button {
     background-color: #fff;
+    width: 15%;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 0.5em;
     cursor: pointer;
     margin: 10px 5px;
   }
@@ -67,28 +69,47 @@ button#next[disabled] {
 .noticias {
    
     width: 100%;
-    height: 350px;
-    left: 118px;
+    height: 200px;
+    height: auto;
     margin: 2em;
-    
+    background: black;
+}
 
-    background: #FFFFFF;
+#conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 #conteudo .noticias {
     width: 100%;
-    height: 350px;
-    left: 118px;
+    height: 600px;
     
-
     background: #FFFFFF;
 
   }
   
+  #conteudo h2 {
+    text-align: center;
+    color: #00FFFF;
+  }
   #botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-top: 20px;
+    width: 100%;
+    
   }
   
   #botoes button {
-    margin: 0 10px;
+    margin: 0 0.5em;
+    width: 18%;
+  }
+
+  #botoes p {
+    text-align: center;
   }
