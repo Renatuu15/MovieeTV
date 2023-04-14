@@ -15,6 +15,7 @@ nav {
     z-index: 3;
 }
 
+
 .header-img{
     background-image: url(../imgindex/8776877-cinema-movie-hall-icons-set-cartoon-style-vetor.jpg);
     background-size: cover;
@@ -65,10 +66,13 @@ section {
 .inital-background {
     background-image: url(../imgindex/vecteezy_cartoon-cinema-elements-movie-theater-popcorn-filming-cinema_14719448.jpg);
     background-size: cover;
+    background-position:  top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100%;
-    height: 150px;
+    height: 250px;
+    margin-bottom: -3em;
+    
 }
 
 .first-section {
@@ -184,3 +188,4 @@ section {
         order: 1;
     }
 }
+
