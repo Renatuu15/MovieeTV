@@ -27,8 +27,8 @@
 
             <ul class="nav-links">
                 <i class="uil uil-times navCloseBtn"></i>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Filmes</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="filmes.html">Filmes</a></li>
                 <li><a href="noticias.html">Notícias</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
@@ -42,24 +42,117 @@
     </header>
     <main>
         <section>
-            <div id="conteudo">
-                <h2>Notícias populares</h2>
-                    <div class="noticias"></div>
-                    <div class="noticias"></div>
-                    <div class="noticias"></div>
-                    <div class="noticias"></div>
-                    <div class="noticias"></div>
-                    <div id="botoes">
-                        <button id="prev" class="response">
-                            <p>Anterior</p>
-                        </button>
-                        <button id="next">
-                            <p>Próximo</p>
-                        </button>
-                    </div>
+          <div id="conteudo">
+            <h2>Notícias populares</h2>
+            <div id="noticias1" class="noticias"></div>
+            <div id="noticias2" class="noticias"></div>
+            <div id="noticias3" class="noticias"></div>
+            <div id="noticias4" class="noticias"></div>
+            <div id="botoes">
+              <button id="prev" class="response">
+                <p>Anterior</p>
+              </button>
+              <button id="next">
+                <p>Próximo</p>
+              </button>
             </div>
+          </div>
         </section>
-    </main>
+      </main>
+      <script>
+
+var xhr1 = new XMLHttpRequest();
+  var xhr2 = new XMLHttpRequest();
+  var xhr3 = new XMLHttpRequest();
+  var xhr4 = new XMLHttpRequest();
+  var filme1 = 13;
+  var filme2 = 634649;
+  var filme3 = 671;
+  var filme4 = 299534;
+  
+  xhr1.onload = function() {
+      if (xhr1.status === 200) {
+        var blob = new Blob([xhr1.response], { type: 'image/png' });
+        var imgUrl = URL.createObjectURL(blob);
+
+        var noticiasDivs = document.querySelectorAll('#noticias1');
+        for (var i = 0; i < noticiasDivs.length; i++) {
+          var img = document.createElement("img");
+          img.src = imgUrl;
+          noticiasDivs[i].appendChild(img);
+        }
+
+        // Chama a segunda requisição após a primeira ser concluída
+        xhr2.open('GET', 'http://localhost:8080/api/v2/movies/' + filme2.toString() + '/w400/poster', true);
+        xhr2.responseType = 'arraybuffer';
+        xhr2.send();
+      } else {
+        console.error('Erro ao carregar imagem');
+      }
+    };
+
+  xhr2.onload = function() {
+      if (xhr2.status === 200) {
+        var blob = new Blob([xhr2.response], { type: 'image/png' });
+        var imgUrl = URL.createObjectURL(blob);
+
+        var noticiasDivs = document.querySelectorAll('#noticias2');
+        for (var i = 0; i < noticiasDivs.length; i++) {
+          var img = document.createElement("img");
+          img.src = imgUrl;
+          noticiasDivs[i].appendChild(img);
+        }
+      } else {
+        console.error('Erro ao carregar imagem');
+      }
+    };
+
+  xhr1.open('GET', 'http://localhost:8080/api/v2/movies/' + filme1.toString() + '/w400/poster', true);
+  xhr1.responseType = 'arraybuffer';
+  xhr1.send();
+
+  xhr3.onload = function() {
+      if (xhr3.status === 200) {
+        var blob = new Blob([xhr3.response], { type: 'image/png' });
+        var imgUrl = URL.createObjectURL(blob);
+
+        var noticiasDivs = document.querySelectorAll('#noticias3');
+        for (var i = 0; i < noticiasDivs.length; i++) {
+          var img = document.createElement("img");
+          img.src = imgUrl;
+          noticiasDivs[i].appendChild(img);
+        }
+      } else {
+        console.error('Erro ao carregar imagem');
+      }
+    };
+
+  xhr4.open('GET', 'http://localhost:8080/api/v2/movies/' + filme4.toString() + '/w400/poster', true);
+  xhr4.responseType = 'arraybuffer';
+  xhr4.send();
+
+  xhr4.onload = function() {
+      if (xhr4.status === 200) {
+        var blob = new Blob([xhr4.response], { type: 'image/png' });
+        var imgUrl = URL.createObjectURL(blob);
+
+        var noticiasDivs = document.querySelectorAll('#noticias4');
+        for (var i = 0; i < noticiasDivs.length; i++) {
+          var img = document.createElement("img");
+          img.src = imgUrl;
+          noticiasDivs[i].appendChild(img);
+        }
+      } else {
+        console.error('Erro ao carregar imagem');
+      }
+    };
+
+  xhr3.open('GET', 'http://localhost:8080/api/v2/movies/' + filme3.toString() + '/w400/poster', true);
+  xhr3.responseType = 'arraybuffer';
+  xhr3.send();
+      </script>
+
+
     <footer>
         <div class="footer-container ">
             <div class="row-footer">

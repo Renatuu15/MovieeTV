@@ -26,7 +26,7 @@
       <ul class="nav-links">
         <i class="uil uil-times navCloseBtn"></i>
         <li><a href="./index.html">Inicio</a></li>
-        <li><a href="#">Filmes</a></li>
+        <li><a href="filmes.html">Filmes</a></li>
         <li><a href="noticias.html">Notícias</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
@@ -58,23 +58,67 @@
     </section>
     <section class="section-form"> 
       <h2 class="form-title">Formulário para contato</h2>
-      <form action="" method="post">
-        <label for="name">Nome
-          <input type="text" id="name" name="name" placeholder="Digite seu nome">
+      <form action="/api/v2/form" method="post" id="meuFormulario">
+        <label for="nome">Nome
+          <input type="text" id="name" name="nome" placeholder="Digite seu nome">
         </label>
         <label for="email">Email
           <input type="email" id="email" name="email" placeholder="Digite seu email">
         </label>
-        <label for="assunto:">Assunto
+        <label for="assunto">Assunto
           <input type="text" name="assunto" id="assunto" placeholder="Digite o assunto?">
         </label>
-        <label for="">Mensagem
-          <textarea name="" id="" cols="300" rows="10" placeholder="Digite uma mensagem"></textarea>
+        <label for="mensagem">Mensagem
+          <textarea name="" id="mensagem" cols="300" rows="10" placeholder="Digite uma mensagem"></textarea>
         </label>
         <input type="submit" value="Enviar">
       </form>
     </section>
   </main>
+  <script>
+    // adicionar evento de envio ao formulário
+    var formulario = document.getElementById('meuFormulario');
+    formulario.addEventListener('submit', function(event) {
+      event.preventDefault(); // evitar que o formulário seja enviado de forma tradicional
+
+      // criar objeto XMLHttpRequest
+      var xhr = new XMLHttpRequest();
+
+      // definir URL da API REST
+      var url = 'http://localhost:8080/api/v2/form';
+
+      // definir método HTTP
+      var method = 'POST';
+
+      // abrir conexão com a API REST
+      xhr.open(method, url);
+
+      // definir cabeçalho de tipo de conteúdo
+      xhr.setRequestHeader('Content-Type', 'application/json');
+
+      // obter dados do formulário
+      var data = {
+        nome: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        assunto: document.getElementById('assunto').value,
+        mensagem: document.getElementById('mensagem').value
+      };
+
+      // converter dados em JSON e enviar
+      xhr.send(JSON.stringify(data));
+
+      // adicionar evento de escuta para a resposta do servidor
+      xhr.addEventListener('load', function() {
+        if (xhr.status === 200) {
+          // a resposta do servidor foi bem-sucedida
+          console.log(xhr.responseText);
+        } else {
+          // a resposta do servidor falhou
+          console.error('Erro ao enviar dados do formulário');
+        }
+      });
+    });
+  </script>
 </body>
 <footer>
   <div class="footer-container">
