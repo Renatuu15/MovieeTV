@@ -67,7 +67,8 @@ button#next[disabled] {
     margin-bottom: 20px;
   }
 .noticias {
-   
+  
+  
     width: 100%;
     margin: 2em;
     background: black;
@@ -118,4 +119,24 @@ button#next[disabled] {
 
   #botoes p {
     text-align: center;
+  }
+
+
+
+  .noticias h1 {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color:black;
+    /* outros estilos de texto */
+  }
+
+  .noticias p {
+    position: absolute;
+    top: 70%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    color:black;
+    /* outros estilos de texto */
   }

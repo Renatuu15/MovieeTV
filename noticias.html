@@ -44,10 +44,24 @@
         <section>
           <div id="conteudo">
             <h2>Notícias populares</h2>
-            <div id="noticias1" class="noticias"></div>
-            <div id="noticias2" class="noticias"></div>
-            <div id="noticias3" class="noticias"></div>
-            <div id="noticias4" class="noticias"></div>
+            <div id="noticias1" class="noticias">
+              <h1>FORREST 2</h1>
+              <p>Depois de quase 30 anos desde o <br>lançamento de "Forrest Gump", o <br>diretor Robert Zemeckis anunciou <br>que está trabalhando em uma <br>sequência do filme intitulada <br>"Forrest Gump 2: A Nova Jornada". <br>A notícia pegou todos de surpresa, <br>já que tanto Zemeckis quanto <br>Tom Hanks, que interpretou o <br>personagem principal, haviam <br>declarado anteriormente que não <br>estavam interessados em fazer <br>uma sequência.</p>
+            </div>
+            <div id="noticias2" class="noticias">
+              <h1 style="margin-top: 45%;">SPIDER-MAN</h1>
+              <p style="margin-top: 42%; left:64%;">A Sony Pictures anunciou oficialmente <br>que está trabalhando em um novo <br>filme do Homem-Aranha, que será <br>intitulado "Homem-Aranha: <br>Nova Geração". O filme apresentará um<br> novo herói vestindo a máscara do <br>Homem-Aranha, interpretado pelo <br>jovem ator britânico Tom Holland.</p>
+           </div>
+            <div id="noticias3" class="noticias">
+              <h1>Harry Potter</h1>
+              <p>A editora Bloomsbury anunciou <br>que  está trabalhando em uma <br>nova edição ilustrada de<br> "Harry Potter e a Pedra Filosofal" <br>o primeiro livro da série de J.K. Rowling. <br>A nova edição será lançada em <br>comemoração aos 25 anos desde a <br>publicação do livro original e <br>apresentará ilustrações <br>inéditas do artista Jim Kay.</p>
+         
+            </div>
+          
+            <div id="noticias4" class="noticias">
+              <h1 style="margin-top: 45%;">VINGADORES</h1>
+              <p style="margin-top: 42%; left:64%;">Após o sucesso do último filme dos <br>Vingadores, "Vingadores: Ultimato", <br> a Marvel Studios anunciou que está <br>trabalhando em uma nova equipe <br>de super-heróis para enfrentar<br> ameaças cósmicas ainda maiores. </p>
+                </div>
             <div id="botoes">
               <button id="prev" class="response">
                 <p>Anterior</p>
@@ -83,7 +97,7 @@ var xhr1 = new XMLHttpRequest();
         }
 
         // Chama a segunda requisição após a primeira ser concluída
-        xhr2.open('GET', 'http://localhost:8080/api/v2/movies/' + filme2.toString() + '/w400/poster', true);
+        xhr2.open('GET', 'https://loyal-root-production.up.railway.app/api/v2/movies/' + filme2.toString() + '/w400/poster', true);
         xhr2.responseType = 'arraybuffer';
         xhr2.send();
       } else {
@@ -107,7 +121,7 @@ var xhr1 = new XMLHttpRequest();
       }
     };
 
-  xhr1.open('GET', 'http://localhost:8080/api/v2/movies/' + filme1.toString() + '/w400/poster', true);
+  xhr1.open('GET', 'https://loyal-root-production.up.railway.app/api/v2/movies/' + filme1.toString() + '/w400/poster', true);
   xhr1.responseType = 'arraybuffer';
   xhr1.send();
 
@@ -127,7 +141,7 @@ var xhr1 = new XMLHttpRequest();
       }
     };
 
-  xhr4.open('GET', 'http://localhost:8080/api/v2/movies/' + filme4.toString() + '/w400/poster', true);
+  xhr4.open('GET', 'https://loyal-root-production.up.railway.app/api/v2/movies/' + filme4.toString() + '/w400/poster', true);
   xhr4.responseType = 'arraybuffer';
   xhr4.send();
 
@@ -147,7 +161,7 @@ var xhr1 = new XMLHttpRequest();
       }
     };
 
-  xhr3.open('GET', 'http://localhost:8080/api/v2/movies/' + filme3.toString() + '/w400/poster', true);
+  xhr3.open('GET', 'https://loyal-root-production.up.railway.app/api/v2/movies/' + filme3.toString() + '/w400/poster', true);
   xhr3.responseType = 'arraybuffer';
   xhr3.send();
       </script>
