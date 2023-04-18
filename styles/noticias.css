@@ -74,16 +74,12 @@ button#next[disabled] {
     background: black;
 }
 
-#noticias1,
-#noticias2,
-#noticias3,
-#noticias4 {
+.noticias2 {
+
   width: 100%;
   margin: 2em;
-
   background: black;
 }
-
 
 
 #conteudo {
@@ -92,9 +88,8 @@ button#next[disabled] {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 100%;
-  max-width: 1000px;
-  height: 0 auto;
+  width: 80%;
+  height: auto;
 }
 #conteudo .noticias {
     width: 100%;
@@ -125,20 +120,20 @@ button#next[disabled] {
 
 
 
-  .noticias h2 {
-    text-align: right;
+  .noticias h1 {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
     color:black;
-    margin: 0 2em;
-    padding: 0.5em;
     /* outros estilos de texto */
   }
 
-  .noticias p {  
-    text-align: right; 
+  .noticias p {
+    position: absolute;
+    top: 70%;
+    left: 63%;
+    transform: translate(-50%, -50%);
     color:black;
-    margin: 0 2em;
-    padding: 0.5em;
     /* outros estilos de texto */
   }
-
-  
